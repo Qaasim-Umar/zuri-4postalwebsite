@@ -23,7 +23,7 @@ body {
 .nav-list {
   margin: 1rem 0;
 }
-.nav-list a:hover{
+.nav-list a:hover {
   color: aliceblue;
 }
 .search-box {
@@ -49,6 +49,7 @@ body {
   height: 50px;
   border-radius: 0px 10px 10px 0px;
   padding: 0.75rem 2rem;
+  cursor: pointer; /* Add cursor property for better UX */
 }
 .search-icon {
   height: 2.5rem;
@@ -66,6 +67,7 @@ input[type="text"] {
   width: 78vw;
   border: none;
   background: rgba(250, 253, 250, 1);
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08); /* Vendor Prefix for Webkit Browsers */
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
   border-radius: 10px 0px 0px 10px;
 }
@@ -126,7 +128,7 @@ td {
 .h2 {
   margin-left: 3.6rem;
   margin-top: 4rem;
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   font-size: 28px;
   font-weight: 600;
 }
@@ -167,7 +169,7 @@ span {
 .grid-list3 {
   margin-left: 4rem;
 }
-#bars{
+#bars {
   display: none;
 }
 
@@ -176,7 +178,7 @@ span {
     flex-direction: column;
     padding: 0;
   }
-  #bars{
+  #bars {
     display: block;
   }
   .img-container {
@@ -233,13 +235,13 @@ span {
   .header {
     padding: 0.4rem 1rem;
   }
-  .nav-list a{
-margin-bottom: 1.2rem;
-text-align: center;
+  .nav-list a {
+    margin-bottom: 1.2rem;
+    text-align: center;
     display: block;
   }
  
-  .nav-list{
+  .nav-list {
     background: rgba(249, 200, 14, 1);
     width: 100%;
     position: absolute;
