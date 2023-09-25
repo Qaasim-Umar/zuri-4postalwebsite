@@ -12,6 +12,8 @@ body {
   justify-content: space-between;
   padding: 0.4rem 2rem;
   background: rgba(249, 200, 14, 1);
+  position: relative;
+  align-items: center;
 }
 .nav-list a {
   text-decoration: none;
@@ -20,6 +22,9 @@ body {
 }
 .nav-list {
   margin: 1rem 0;
+}
+.nav-list a:hover{
+  color: aliceblue;
 }
 .search-box {
   display: flex;
@@ -84,7 +89,7 @@ input[type="text"] {
   padding: 2rem 1rem;
 }
 .hero-text > p {
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 400;
 }
 .filter {
@@ -162,11 +167,17 @@ span {
 .grid-list3 {
   margin-left: 4rem;
 }
+#bars{
+  display: none;
+}
 
 @media only screen and (max-width: 768px) {
   .hero-flex {
     flex-direction: column;
     padding: 0;
+  }
+  #bars{
+    display: block;
   }
   .img-container {
     width: 22rem;
@@ -221,5 +232,25 @@ span {
   }
   .header {
     padding: 0.4rem 1rem;
+  }
+  .nav-list a{
+margin-bottom: 1.2rem;
+text-align: center;
+    display: block;
+  }
+ 
+  .nav-list{
+    background: rgba(249, 200, 14, 1);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 2.9rem;
+    z-index: 3;
+    padding: 1rem 0;
+    border-top: 2px solid black;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .nav-list.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
